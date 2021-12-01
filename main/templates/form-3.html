@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<style type="text/css">
+  body {
+    background: #f8f8f8;
+}
+
+
+</style>
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo "><a href="index.html"><img src="{% static 'assets/img/logo.png' %}"></a></h1>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main " class="mt-5">
+      <div class="container ">
+        <form method='post'>
+          {% csrf_token %}
+          <h3 class="text-center">YOUR ESTIMATE IS ALMOST READY</h3>
+          <p class="text-center"><small  class="text-center">STEP 3 OF 3</small></p>
+          <div class="row  border rounded w-60  bg-white">
+            <div class="col">
+              <div class="mt-5 px-2">
+                <p class="text-center">Sign up to view</p>
+                  <div class="form-group">
+                    <div class="form-row">
+                      <input id="username" type="text" name="name" maxlength="100" autocomplete="off" class="border-0 border-bottom form-control px-0 py-2 mt-3" placeholder="Name" value="">
+                    </div>
+                    <div class="form-row">
+                      <input id="username" type="email" name="email" autocomplete="off" class="border-0 border-bottom form-control px-0 py-2 mt-3" placeholder="Email" value="">
+                    </div>
+                    <div class="form-row">
+                      <input id="username" type="tel" name="phone" autocomplete="off" class="border-0 border-bottom form-control px-0 py-2 mt-3" placeholder="Phone number" value="">
+                    </div>
+                    <div class="form-row">
+                      <select name="possesionDate" placeholder="Possession in" class="form-select border-0 border-bottom  px-0 py-2 mt-3 ">
+                        <option selected>Possession in</option>
+                        <option value="below 3 Months"> &lt; 3 Months</option>
+                        <option value="3-6 Months"> 3-6 Months</option>
+                        <option value="> 6 Months">&gt; 6 Months</option>
+                      </select>
+                    </div>
+
+                    <div class="form-row">
+                      <input placeholder="Current residence PIN code" maxlength="6" autocomplete="off" id="pincode" type="text" name="pincode" class="border-0 border-bottom form-control px-0 py-2 mt-3" value="">
+                    </div>
+                    <div class="form-row mt-4">
+                      <button class="w-100 fw-bold btn ms-0"> SIGN UP</button>
+                    </div>
+                  </div>
+                  <div class="mt-5">
+                    <p class="text-center"><small>Or Signup with</small></p>
+                    <div class="d-lg-flex social-links align-items-center justify-content-center">
+                          <a href="#" class="twitter display-5 theme-color me-2"><i class="bi bi-twitter"></i></a>
+                          <a href="#" class="facebook display-5 theme-color"><i class="bi bi-facebook"></i></a>
+                        </div>
+                        <p class="mt-4 text-center mb-0"><small><span>Already have an account? </span><a class="" id="login" href="javascript:void(0)" style="color: rgb(231, 28, 36);">Log in</a><span class=" "> here</span></small></p>
+                        <p class="text-center"><small><a class="" href="#" target="_blank">Terms &amp; Conditions</a> | <a class="" href="" target="_blank">Privacy Policy</a></small></p>
+                  </div>
+              </div>
+            </div>
+            <div class="col border-start px-0  ">
+              
+                <img src="{% static 'assets/img/form-side.jpg' %}" class="img-fluid w-100 ">
+              
+            </div>
+          </div>
+          <div class="mt-5 w-60">
+            <button id="step1enter" class="btn  ms-0 rounded fw-bold   " title="">BACK</button>
+          </div>
+        </form>
+      </div>
+  </main>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

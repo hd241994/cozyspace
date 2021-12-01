@@ -1,1 +1,113 @@
+{% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<style type="text/css">
+  body {
+    background: #f8f8f8;
+  }
+</style>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo "><a href="index.html"><img src="{% static 'assets/img/logo.png' %}"></a></h1>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main " class="mt-5">
+    <div class="container ">
+      <!-- <form method='post'>
+        {% csrf_token %} -->
+      <!-- <h3 class="text-center">YOUR ESTIMATE IS ALMOST READY</h3> -->
+      <!-- <p class="text-center"><small class="text-center">STEP 3 OF 3</small></p> -->
+      <div class="row  border rounded w-60  bg-white">
+        <div class="col">
+          <div class="mt-5 px-2">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="mt-5 w-60">
+                  <!-- <a href="{% url 'customer-list' %}"><button class="w-100 fw-bold btn ms-0"> Validate</button></a> -->
+                  <!-- <a href="{% url 'customer-list' %}"><button id="step1enter" class="btn  ms-0 rounded  " title="">Go to LIST</button></a> -->
+                </div>
+                <a href="{% url 'customer-list' %}"><button id="step1enter" class="btn  ms-0 rounded  " title="">Go to LIST</button></a>
+                <h2 class="text-center">Customer Details</h2>
+                
+                <hr>
+                <strong>Customer Name: </strong>{{ customer.customer_name }}<br>
+                <strong> Email: </strong>{{ customer.customer_email }}<br>
+                <strong>Customer Phone:</strong> {{ customer.customer_number }}<br>
+                <strong>Phone Number Verified:</strong>{% if customer.is_number_verified %} Yes {% else %} No {% endif %}<br>
+                <strong>Possesion Time: </strong>{{ customer.possesion_time }}<br>
+                <strong>Pincode:</strong> {{ customer.pincode }}<br>
+                <strong>Floor Plan:</strong> {{ customer.floorPlan }}<br>
+                <strong>Purpose:</strong> {{ customer.purpose }}<br>
+
+                <br>
+                <br>
+                <h5 class="text-center">For New Project</h5>
+                <hr>
+                <strong>Kitchen:</strong> {{ customer.kitchen }}<br>
+                <strong>Wardrobe:</strong> {{ customer.wardrobe }}<br>
+                <strong>Crockery Unit:</strong> {{ customer.crockeryunit }}<br>
+                <strong>Pooja Room:</strong> {{ customer.poojaroom }}<br>
+                <strong>Study Room:</strong> {{ customer.studyunit }}<br>
+                <strong>Entertainment Unit:</strong> {{ customer.entertainmentunit }}<br>
+                <strong>Wash Room:</strong> {{ customer.washroom }}<br>
+
+                <br>
+                <br>
+                <h5 class="text-center">For Renovation</h5>
+                <hr>
+                <strong>Owner Type:</strong> {{ customer.ownertype }}<br>
+                <strong>Budget:</strong> {{ customer.budget }}<br>
+                <strong>Possesion Type:</strong> {{ customer.possesion_type }}<br>
+                <br>
+                <br>
+                <!-- <a href="{% url 'customer-list' %}"><button class="w-100 fw-bold btn ms-0"> Go to List</button></a> -->
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col border-start px-0  ">
+            <img src="{% static 'assets/img/form-side.jpg' %}" class="img-fluid w-100 ">
+          </div> -->
+      </div>
+      <!-- </form> -->
+    </div>
+  </main>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+</body>
+
+</html>
