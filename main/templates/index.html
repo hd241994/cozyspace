@@ -1,0 +1,540 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i'" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Medilab - v4.5.0
+  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="#">contact@example.com</a>
+        <i class="bi bi-phone"></i> +1 5589 55488 55
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo "><a href="{%url 'index' %}"><img src="{% static 'assets/img/logo.png' %}"></a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active fw-bold color-theme" href="#hero">1BHK</a></li>
+          <li><a class="nav-link scrollto fw-bold color-theme" href="#about">2BHK</a></li>
+          <li><a class="nav-link scrollto fw-bold color-theme" href="#services">3BHK</a></li>
+          <li><a class="nav-link scrollto fw-bold color-theme" href="#departments">4BHK</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="{%url 'form_1' %}" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center justify-content-center position-relative">
+    <div class="container">
+      <h1 class="fw-normal text-center">Dream It, <strong>We Make It</strong></h1>
+    </div>
+    <div class="position-absolute banner_form_container top-0 end-0  d-flex bottom-0 align-items-center">
+      <div class="banner_form p-3 ">
+        <h4 class="mb-3">Meet a Designer Online</h4>
+            <div class=" form-group mb-3 ">
+                <input type="text" name="name" class="form-control rounded-0 border-0  px-0  border-bottom" id="name" placeholder="Enter Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            </div>
+            <div class=" form-group mb-3">
+                <input type="text" name="name" class="form-control rounded-0 border-0 px-0   border-bottom" id="name" placeholder="Enter Your Email" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            </div>
+            <div class=" form-group mb-3">
+                <input type="text" name="name" class="form-control rounded-0 border-0 px-0   border-bottom" id="name" placeholder="Enter Your Phone Number" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            </div>
+            <div class=" form-group mb-3">
+                <input type="text" name="name" class="form-control rounded-0 border-0 px-0   border-bottom" id="name" placeholder="Enter Your Residence Pincode" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            </div>
+            <div class="text-center mb-1 mt-2"><button type="submit" class="btn ms-0 btn-theme w-100 ">Make an Appointment</button></div>
+            <p class="form_privecy fw-bold text-small">By submiting this form, you agree the <a href="#">Privecy policy</a> and <a href="#">Terms</a>. </p>
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Why Us Section ======= -->
+    <section id="why-us" class="why-us">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center fw-light mb-5">Why Choose <strong class="fw-bold theme-color">Design Cafe Home?</strong></h2>
+        </div>
+        <div class="row">
+              <div class="col-xl-3 col-md-6 d-flex align-items-stretch justify-content-center">
+                <div class="chose-box mt-4 mt-xl-0 text-center">
+                  <figure class="mx-auto p-3 rounded-circle  position-relative d-flex align-items-center justify-content-center"><img src="{% static 'assets/img/choose (1).png' %}"></figure>
+                  <h5 class="fw-bold">Personalised Designs</h5>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 d-flex align-items-stretch justify-content-center">
+                <div class="chose-box mt-4 mt-xl-0 text-center">
+                  <figure class="mx-auto p-3 rounded-circle d-flex position-relative align-items-center justify-content-center"><img src="{% static 'assets/img/choose (2).png' %}"></figure>
+                  <h5 class="fw-bold">20% Extra Storage  </h5>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 d-flex align-items-stretch justify-content-center">
+                <div class="chose-box mt-4 mt-xl-0 text-center">
+                  <figure class="mx-auto p-3 rounded-circle d-flex position-relative align-items-center justify-content-center"><img src="{% static 'assets/img/choose (3).png' %}"></figure>
+                  <h5 class="fw-bold">No Cost EMIs  </h5>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-6 d-flex align-items-stretch justify-content-center">
+                <div class="chose-box mt-4 mt-xl-0 text-center">
+                  <figure class="mx-auto p-3 rounded-circle d-flex position-relative align-items-center justify-content-center"><img src="{% static 'assets/img/choose (4).png' %}"></figure>
+                  <h5 class="fw-bold">10 Yrs Warranty</h5>
+                </div>
+              </div>
+            </div>
+      </div>
+    </section><!-- End Why Us Section -->
+    <div class="title_section text-center">
+      <h2 class="display-4 fw-bold ">Design Highlights</h2>
+    </div>
+    <!-- ======= Kitchen Gallery ======= -->
+    <section  class="slider_section pt-5">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center fw-light mb-3">Kitchen</h2>
+        </div>
+        <div class="position-relative">
+           <div class="kitchen_prev swiper-prev theme-color display-5 position-absolute top-50  start-0">
+              <i class="bi bi-arrow-left"></i>
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="kitchen_gallery gallery_slider swiper ">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (1).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (1).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (2).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (2).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (3).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (3).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="kitchen_next swiper-next theme-color display-5 position-absolute top-50  end-0 ">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section><!-- End kitchen gallery Section -->
+    <!-- ======= Bed room Gallery ======= -->
+    <section  class="slider_section pt-0">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center fw-light mb-3">Bed room</h2>
+        </div>
+        <div class="position-relative">
+           <div class="bedroom_prev swiper-prev theme-color display-5 position-absolute top-50  start-0">
+              <i class="bi bi-arrow-left"></i>
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="bedroom_gallery gallery_slider swiper ">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (1).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (1).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (2).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (2).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (3).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (3).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="bedroom_next  swiper-next theme-color display-5 position-absolute top-50  end-0 ">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Bed room gallery Section -->
+     <!-- ======= Bed room Gallery ======= -->
+    <section  class="slider_section pt-0">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="text-center fw-light mb-3">Living room</h2>
+        </div>
+        <div class="position-relative">
+           <div class="livingroom_prev swiper-prev theme-color display-5 position-absolute top-50  start-0">
+              <i class="bi bi-arrow-left"></i>
+            </div>
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-md-8">
+                  <div class="livingroom_gallery gallery_slider swiper ">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (1).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (1).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (2).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (2).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="gallery-item">
+                          <a href="{% static 'assets/img/kitchen (3).jpg' %}" class="galelry-lightbox">
+                            <img src="{% static 'assets/img/kitchen (3).jpg' %}" alt="" class="img-fluid rounded ">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           <div class="livingroom_next  swiper-next theme-color display-5 position-absolute top-50  end-0 ">
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Bed room gallery Section -->
+
+    <!-- ======= Appointment Section ======= -->
+    <section id="appointment" class="appointment section-bg">
+          <div class="container">
+            <div class="section-title">
+              <h2 class="text-center fw-light mb-3 text-light">Ready to Design your <strong>Dream Home</strong></h2>
+            </div>
+
+            <form action="forms/appointment.php" method="post" role="form" class="php-email-form w-75 mx-auto">
+              <div class="row ">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group">
+                  <input type="tel" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group mt-3">
+                  <select name="department" id="department" class="form-select">
+                    <option value="">Select Department</option>
+                    <option value="Department 1">Department 1</option>
+                    <option value="Department 2">Department 2</option>
+                    <option value="Department 3">Department 3</option>
+                  </select>
+                  <div class="validate"></div>
+                </div>
+                <div class="col-md-6 form-group mt-3">
+                  <select name="doctor" id="doctor" class="form-select">
+                    <option value="">Select Doctor</option>
+                    <option value="Doctor 1">Doctor 1</option>
+                    <option value="Doctor 2">Doctor 2</option>
+                    <option value="Doctor 3">Doctor 3</option>
+                  </select>
+                  <div class="validate"></div>
+                </div>
+              </div>
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your appointment request has been sent successfully. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Make an Appointment</button></div>
+            </form>
+
+          </div>
+        </section>
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+          <div class="container">
+
+            <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+              <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                      <h3>Saul Goodman</h3>
+                      <h4>Ceo &amp; Founder</h4>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                      <h3>Sara Wilsson</h3>
+                      <h4>Designer</h4>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                      <h3>Jena Karlis</h3>
+                      <h4>Store Owner</h4>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                      <h3>Matt Brandon</h3>
+                      <h4>Freelancer</h4>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+                <div class="swiper-slide">
+                  <div class="testimonial-wrap">
+                    <div class="testimonial-item">
+                      <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                      <h3>John Larson</h3>
+                      <h4>Entrepreneur</h4>
+                      <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                    </div>
+                  </div>
+                </div><!-- End testimonial item -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+
+          </div>
+        </section><!-- End Testimonials Section -->
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact py-0">
+      <div class="w-100 d-flex align-items-center">
+        <div class="w-50">
+          <iframe style="border:0; width: 100%; min-height: 450px ;height: 100%; margin-bottom: -10px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="contact_info w-50 ">
+          <div class="w-100 d-flex px-5">
+            <div class="w-50 address pe-3">
+              <h4 class="text-light">ADDRESS</h4>
+              <p class="text-light"><i class="bi bi-geo-alt"></i> Suit No - 302, 3rd Floor, Subishi Plaza,<br> Kondapur, Hyderbad - 500084</p>
+              <p class="text-light"><i class="bi bi-phone"></i> +91 99999 99999</p>
+              <p class="text-light"><i class="bi bi-envelope"></i> info@example.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 class="text-light">Cozy Space</h3>
+            <p class="text-light">
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4 class="text-light">Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Modular Kitchen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Wardrobe Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Interior Designers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Kitchen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Bedroom</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Living room</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 class="text-light">Another Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Modular Kitchen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Wardrobe Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Interior Designers</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Kitchen</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Bedroom</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#" class="text-light">Living room</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4 class="text-light">Join Our Newsletter</h4>
+            <p class="text-light">Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4 border-top">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright text-light">
+          &copy; Copyright <strong><span>CozySpace</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits text-light">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="#" class="twitter text-light"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook text-light"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram text-light"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus text-light"><i class="bx bxl-skype"></i></a>
+        <a href="#" class="linkedin text-light"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

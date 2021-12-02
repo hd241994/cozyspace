@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<style type="text/css">
+  body {
+    background: #f8f8f8;
+  }
+</style>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo "><a href="index.html"><img src="{% static 'assets/img/logo.png' %}"></a></h1>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main " class="mt-5">
+    <div class="container ">
+      <form method="POST" action="" id="Test">
+        {% csrf_token %}
+        <h3 class="text-center">TELL US WHAT YOU NEED</h3>
+        <p class="text-center"><small class="text-center">STEP 2 OF 3</small></p>
+        <div class="row  border rounded w-60  bg-white">
+          <div class="col">
+            <div class="mt-5 px-2">
+              <p>Your requirements *</p>
+              <div class=" d-flex justify-content-between  mt-2 py-3 border-bottom">Kitchen
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="kitchen" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" d-flex justify-content-between  mt-2 py-3 border-bottom">Wardrobe
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="wardrobe" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" d-flex justify-content-between  mt-2 py-3    border-bottom">Crockery unit
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="crockery" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" d-flex justify-content-between  mt-2 py-3 border-bottom">Pooja Room
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="pooja room" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" d-flex justify-content-between  mt-2 py-3 border-bottom">Study unit
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="study unit" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class=" d-flex justify-content-between  mt-2 py-3 border-bottom">Entertainment unit
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" name="entmntunit" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+              <div class=" d-flex justify-content-between  mt-2 py-3 mb-5 border-bottom">Wash Room
+                <div class="wardrobe-inputgrp">
+                  <div class="addOnCount">
+                    <button class="quantBtn removebtn" type="button" action="remove">−</button><input class="intQuant"
+                      type="text" id="test7" name="washroom" value="0"><button class="quantBtn" type="button"
+                      action="add">＋</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col border-start  ">
+            <div class="mt-5 text-center mb-4 p-4">
+              <img src="{% static 'assets/img/interiors-grey-2.webp' %}" class="img-fluid w-50 mb-5">
+              <h5>Other Interior Products</h5>
+              <p>Get interiors done for your living room, study and foyer areas along with false ceilings, painting and
+                modular furniture.</p>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 w-60">
+          <button type="submit" id="step1enter" class="btn  ms-0 rounded  " title="">Next</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <!-- Vendor JS Files -->
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script type="text/javascript">
+    var incrementPlus;
+    var incrementMinus;
+    var buttonPlus = jQuery("button[action=add]");
+    var buttonMinus = jQuery("button[action=remove]");
+
+    var incrementPlus = buttonPlus.click(function () {
+      var $n = $(this).parent().find(".intQuant");
+      $n.val(Number($n.val()) + 1);
+      // alert(this.val)
+    });
+
+    var incrementMinus = buttonMinus.click(function () {
+      var $n = $(this)
+        .parent()
+        .find(".intQuant");
+      var amount = Number($n.val());
+      if (amount > 0) {
+        $n.val(amount - 1);
+      }
+    });
+  </script>
+</body>
+
+</html>

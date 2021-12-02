@@ -1,0 +1,144 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Medilab Bootstrap Template - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+<style type="text/css">
+  body {
+    background: #f8f8f8;
+  }
+
+  table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: #04AA6D;
+  color: white;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+a:link, a:visited {
+  color: red;
+  cursor: auto;
+}
+</style>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="">
+    <div class="container d-flex align-items-center justify-content-between">
+      <h1 class="logo "><a href="index.html"><img src="{% static 'assets/img/logo.png' %}"></a></h1>
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main " class="mt-5">
+    <div class="container ">
+      <form method='post'>
+        {% csrf_token %}
+        <h3 class="text-center">Customer List</h3>
+        <!-- <p class="text-center"><small class="text-center">STEP 3 OF 3</small></p> -->
+        <div class="row  border rounded w-60  bg-white">
+          <div class="col">
+            <div class="mt-5 px-2">
+              <!-- <p class="text-center">Enter your OTP</p> -->
+              <div class="form-group">
+                <div class="form-row">
+                  <!-- {% if customers %} -->
+                  <table>
+                    <tr>
+                      <th>Name</th>
+                      <th>Registration Date</th>
+                      <th>View Details</th>
+                      <th>Delete Customer</th>
+                    </tr>
+                    {% for cust in customers %}
+                    <tr>
+                      <td>{{ cust }}</td>
+                      <td>{{ cust.reg_date }}</td>
+                      <td><a href="{{ cust.get_absolute_url }}">view</a></td>
+                      <!-- <td><a href="{% url 'customer_delete' cust.id %}">Delete</a></td> -->
+                      <td><a onclick="myFunction()" href="{% url 'customer_delete' cust.id %}">Delete</a></td>
+                    </tr>
+                    {% endfor %}
+                  </table>
+                  <hr>
+                  <!-- {% else %}
+                  <h4>No New Customers Added</h4>
+                  {% endif %} -->
+
+                  <div class="pagination">
+                    <span class="step-links">
+                        {% if customers.has_previous %}
+                            <a href="?page=1">&laquo; first</a>
+                            <a href="?page={{ customers.previous_page_number }}">previous</a>
+                        {% endif %}
+                
+                        <span class="current">
+                            Page {{ customers.number }} of {{ customers.paginator.num_pages }}.
+                        </span>
+                
+                        {% if customers.has_next %}
+                            <a href="?page={{ customers.next_page_number }}">next</a>
+                            <a href="?page={{ customers.paginator.num_pages }}">last &raquo;</a>
+                        {% endif %}
+                    </span>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col border-start px-0  ">
+            <img src="{% static 'assets/img/form-side.jpg' %}" class="img-fluid w-100 ">
+          </div> -->
+        </div>
+      </form>
+    </div>
+  </main>
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script>
+    function myFunction() {
+      alert("Do you want to delete? ");
+    }
+  </script>
+</body>
+
+</html>

@@ -19,5 +19,8 @@ node_modules/
 
 # ignore log files and databases
 *.log
+*.pyo
+*.pyc
 *.sql
-*.sqlite
+*.sqlite3
+**/__pycache__
