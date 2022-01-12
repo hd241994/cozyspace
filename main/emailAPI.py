@@ -3,10 +3,14 @@ from email.message import EmailMessage
 
 
 class EmailSending:
-    def __init__(self):
-        self.__ownermail = "cozyspace21@gmail.com"
-        self.__password = "nqxzwyzhytrcrdqb"
-        self.to = 'jaikumar00.jk@gmail.com'
+    def __init__(self):       
+
+        # self.__ownermail = "cozyspace21@gmail.com"
+        # self.__password = "nqxzwyzhytrcrdqb"
+        self.__ownermail = "askcozyspace@gmail.com"
+        self.__password = "wdctiwipkkcdsocm"
+        # self.to = 'jaikumar00.jk@gmail.com'
+        self.to = ['esu.b.tech@gmail.com', 'deviprasaddigital@gmail.com' ]
         self.sub = ''
         self.body = ''
         self.msg = EmailMessage()

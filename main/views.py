@@ -6,12 +6,13 @@ from django.http import response
 from django.shortcuts import redirect, render, HttpResponse, get_object_or_404
 from django.utils import timezone
 from django.core.paginator import Paginator
-
+from django.core.mail import send_mail
+from django.conf import settings
 # Create your views here.
 
 
 def index(request):
-	return render(request, 'index.html')
+	return render(request, 'main/index.html')
 
 
 def form_1(request):
@@ -85,6 +86,7 @@ def pincode_validation(pin):
 
 
 def form_3(request):
+	import ipdb; ipdb.set_trace()
 	try:
 		if request.method == 'POST':
 			pin = request.POST.get('pincode')
@@ -124,7 +126,7 @@ def form_3(request):
 				getObj.save()
 
 				emailobj = EmailSending()
-				emailobj.sub = str(request.POST.get('name', 'name'))+ " " + str(request.session['floortype'])
+				emailobj.sub = 'REQUEST A QUOTE'
 				# emailobj.to = 'avsr94@gmail.com'
 				emailobj.body = f'''
 				Name of Customer: {request.POST.get('name')},
@@ -169,8 +171,8 @@ def form_3(request):
 def send_otp(request):
 	try:
 		number = request.session['cutomer_phone']
-		# url = f'https://2factor.in/API/V1/{settings.TwoFactorAPI_KEY}/SMS/+91{number}/AUTOGEN'
-		url = f'https://2factor.in/API/V1/{settings.TwoFactorAPI_KEY}/SMS/+91{number}/AUTOGEN/OTP COZYSP'
+		# url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/SMS/+91{number}/AUTOGEN'
+		url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/SMS/+91{number}/AUTOGEN/OTP COZYSP'
 		payload = ""
 		headers = {'content-type': 'application/x-www-form-urlencoded'}
 		response = requests.request('GET', url, data=payload, headers=headers)
@@ -187,7 +189,7 @@ def send_otp(request):
 
 def send_cust_details(request):
 	try:
-		url = f'https://2factor.in/API/V1/{settings.TwoFactorAPI_KEY}/ADDON_SERVICES/SEND/TSMS'
+		url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/ADDON_SERVICES/SEND/TSMS'
 		payload = {
 					'From': 'cozysp',
 					'To': '9059832520',
@@ -199,22 +201,20 @@ def send_cust_details(request):
 					'VAR5': f"{request.session['bhktype']}",
 					'VAR6': f"{request.session.get('budget', 'Budget')}"
 					}
-		# parameters = urllib.parse.urlencode({
-		# 			'From': 'cozysp',
-		# 			'To': '9000081346',
-		# 			'TemplateName': 'Admin MSG',
-		# 			'VAR1': f"{request.session['Name']}",
-		# 			'VAR2': f"{request.session['cutomer_phone']}",
-		# 			'VAR3': f"{request.session['PIN']}",
-		# 			'VAR4': f"{request.session['floortype']}",
-		# 			'VAR5': f"{request.session['bhktype']}",
-		# 			'VAR6': f"{request.session.get('budget', 'Budget')}"
-		# 			})
+
 		headers = {
-  					'Content-Type': 'multipart/form-data'
+					'Content-Type': 'multipart/form-data'
 				}
-		response = requests.request("POST", url, data=payload, headers=headers)
-		requests.request()
+		# response = requests.request("POST", url, data=payload, headers=headers)
+		subject = 'REQUEST A  QUOTE' 
+		message = "Customer Details \n" + str(request.session['Name']) + ', \n' + str(request.session['cutomer_phone']) + ', \n' + \
+					str(request.session['PIN']) + ', \n' + str(request.session['floortype']) + ', \n'+ str(request.session['bhktype'])+ \
+					', \n' + request.session.get('budget', 'Budget')
+		email_from = settings.EMAIL_HOST_USER
+		recipient_list = ['deviprasaddigital@gmail.com', 'esu.b.tech@gmail.com']
+		send_mail( subject, message, email_from, recipient_list ) 
+
+		# requests.request()
 	except Exception as e:
 		print(e)
 
@@ -225,7 +225,7 @@ def otp_validation(request):
 			user_otp = request.POST.get('otp', '')
 			if user_otp:
 				session_id = request.session['session_id']
-				url = f'https://2factor.in/API/V1/{settings.TwoFactorAPI_KEY}/SMS/VERIFY/{session_id}/{user_otp}'
+				url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/SMS/VERIFY/{session_id}/{user_otp}'
 				payload = ""
 				headers = {'content-type': 'application/x-www-form-urlencoded'}
 
@@ -233,10 +233,11 @@ def otp_validation(request):
 				response = response.json()
 				
 				if response["Status"] == "Success":
-					cust = GetQoute.objects.get(customer_name=request.session['Name'], customer_email=request.session['Email'])
+					cust = GetQoute.objects.filter(customer_name=request.session['Name'], 
+						customer_email=request.session['Email']).last()
 					cust.is_number_verified = True
 					cust.save()
-					send_cust_details(request)
+					# send_cust_details(request)
 					request.session.flush()
 					return HttpResponse("Thanks for registering here.")
 				else:
@@ -272,3 +273,6 @@ def delete_customer(request, pk):
 		return redirect('customer-list')
 	except Exception as e:
 		print(e)
+
+def registred_response(request):
+		return render(request, 'main/registred.html')

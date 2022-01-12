@@ -1,0 +1,154 @@
+{% extends 'base-header.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="innerpage_banner_sec">
+   <div class="innerpage_banner ">
+      <img src="{% static 'assets/images/banner-1.jpg' %}">
+   </div>
+   <div class="hero-wrap-item center-item">
+      <h2><span style="color: #ffffff;">Contact Us</span></h2>
+   </div>
+</div>
+<style>
+   .innerpage_banner {
+      background: #000;
+      height: 100%;
+   }
+
+   .innerpage_banner_sec .innerpage_banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.6;
+   }
+   .response_output {
+    margin: 2em 0.5em 1em;
+    padding: 0.2em 1em;
+    border: 2px solid #00a0d2;
+    /* Blue */
+  }
+</style>
+
+<section class="contact section"
+   style="background-image: url(&#39;http://cozyspace.in/wp-content/themes/cozy-space/assets/img/testimonial-bg.png&#39;);">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 mx-auto">
+            <div class="php-email-form p-4">
+               <div role="form" class="wpcf7" id="wpcf7-f67-o1" lang="en-US" dir="ltr">
+                  <div class="screen-reader-response">
+                     <p role="status" aria-live="polite" aria-atomic="true"></p>
+                     <ul></ul>
+                  </div>
+                  <form  method="post" class="wpcf7-form init" novalidate="novalidate"
+                     data-status="init">{% csrf_token %}
+                     <div style="display: none;">
+                        <input type="hidden" name="_wpcf7" value="67">
+                        <input type="hidden" name="_wpcf7_version" value="5.5.2">
+                        <input type="hidden" name="_wpcf7_locale" value="en_US">
+                        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f67-o1">
+                        <input type="hidden" name="_wpcf7_container_post" value="0">
+                        <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                     </div>
+                     <h2 class="text-center mb-3">Contact Us</h2>
+                     <div class="row">
+                        <div class="col-md-6 form-group"> <span class="wpcf7-form-control-wrap YourName"><input
+                                 type="text" name="YourName" value="" size="40" id="name"
+                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                                 aria-required="true" aria-invalid="false" placeholder="Your Name"></span>
+                                 <span class="valid-name"></span></div>
+                        <div class="col-md-6 form-group mt-3 mt-md-0"><span
+                              class="wpcf7-form-control-wrap YourEmail"><input type="email" name="YourEmail" value=""
+                                 size="40" id="email"
+                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
+                                 aria-required="true" aria-invalid="false" placeholder="Your Email"></span>
+                                 <span class="valid-email"></span></div>
+                              </div>
+                     </div>
+                     <div class="form-group mt-3"><span class="wpcf7-form-control-wrap subject"><input type="text"
+                              name="subject" value="" size="40" id="subject"
+                              class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
+                              aria-required="true" aria-invalid="false" placeholder="Subject"></span> </div>
+                     <div class="form-group mt-3"><span class="wpcf7-form-control-wrap Message"><textarea name="Message"
+                              cols="40" rows="5" id="message" class="wpcf7-form-control wpcf7-textarea form-control"
+                              aria-invalid="false" placeholder="Message"></textarea></span>
+                              <span class="valid-msg"></div>
+                     <div class="text-center"><input type="submit" value="Send Message"
+                           class="wpcf7-form-control has-spinner wpcf7-submit btn btn-theme"><span
+                           class="wpcf7-spinner"></span></div>
+                     <div class="wpcf7-response-output" aria-hidden="true"></div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script>
+   $(document).ready(function () {
+      $('form').on('submit', function (e) {
+         e.preventDefault();
+         $('.wpcf7-response-output').html('')
+         let name = $('#name').val()
+         let email = $('#email').val()
+         let subject = $('#subject').val()
+         let message = $('#message').val()
+
+         let error = false
+
+
+         if (name.length < 1) {
+            error = true
+            $('.valid-name').css({ "color": "red" }).text('This field is required')
+
+         }
+         if (email.length < 1) {
+            error = true
+            $('.valid-email').css({ "color": "red" }).text('This field is required')
+
+         }
+         if (message.length < 1) {
+            error = true
+            $('.valid-msg').css({ "color": "red" }).text('This field is required')
+
+         }
+         if (error) {
+            $('.wpcf7-response-output').css({ "color": "red" }).addClass("response_output").html('One or more fields have an error. Please check and try again.')
+
+         }
+         else {
+            data = {
+               'name': name,
+               'email': email,
+               'subject': subject,
+               'message': message
+            }
+            $.ajax({
+               type: 'POST',
+               url: "/ajax_call/contact-us-call/",
+               data: data,
+
+               success: function (resultData) {
+                  if (resultData.Status == 'Error') {
+                     $('.wpcf7-response-output').css({ "color": "red" }).addClass(
+                        "response_output").html('Something went wrong, please try again later.')
+                  }
+                  else {
+                     $('.wpcf7-response-output').css({ "color": "green" }).addClass(
+                        "response_output").html('Thanks for submission.')
+                  }
+               }
+            });
+         }
+
+
+      });
+   });
+   </script>
+   {% endblock %}

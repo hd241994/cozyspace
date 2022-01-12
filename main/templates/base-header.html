@@ -1,0 +1,348 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html lang="en-US" class="skrollr skrollr-desktop">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
+  <title>Cozy space</title>
+  <meta name="robots" content="max-image-preview:large">
+  <link rel="stylesheet" id="cozy_space-fontawesome-style-css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all">
+  <link rel="stylesheet" id="cozy_space-bootstrap-style-css" href="{% static 'assets/css/bootstrap.min.css' %}"
+    media="all">
+  <link rel="stylesheet" id="cozy_space-owl-carousel-style-css" href="{% static 'assets/css/owl.carousel.min.css' %}"
+    media="all">
+  <link rel="stylesheet" id="cozy_space-glightbox-style-css" href="{% static 'assets/css/glightbox.min.css' %}"
+    media="all">
+  <link rel="stylesheet" id="cozy_space-default-style-css" href="{% static 'assets/css/new-style.css' %}" media="all">
+</head>
+<style>
+  .text-light a {
+    color: white !important;
+  }
+</style>
+
+<body class="home page-template-default page page-id-6">
+  <header class="monolit-header d-flex justify-content-between  align-items-center pe-4">
+    <!-- header-inner  -->
+    <div class="header-inner d-flex  align-items-center ">
+      <!-- header logo -->
+      <div class="logo-holder me-5">
+        <a href="/">
+          <img src="{% static 'assets/img/logo.png' %}">
+        </a>
+      </div>
+      <!-- header logo end -->
+      <!-- navigation  -->
+      <div class="nav-holder ">
+        <nav id="navbar" class="navbar ">
+          <ul class=" navbar-nav flex-row ">
+            <li class="menu-item nav-item active"><a class="nav-link" href="/">Home</a></li>
+            <li class="menu-item nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Our Services</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li class="sub-menu-item"><a href="{% url 'wardrobes-storage-units' %}">Wardrobes &amp; Storage
+                    Units</a></li>
+                <li class="sub-menu-item"><a href="{% url 'entertainment-unit' %}">Entertainment Unit</a></li>
+                <li class="sub-menu-item"><a href="{% url 'study-units' %}">Study Units</a></li>
+                <li class="sub-menu-item"><a href="{% url 'puja-units' %}">Puja Units</a></li>
+                <li class="sub-menu-item"><a href="{% url 'bedroom' %}">Bedroom</a></li>
+                <li class="sub-menu-item"><a href="{% url 'movable-furnitures' %}">Movable Furnitures</a></li>
+                <li class="sub-menu-item"><a href="{% url 'modular-kitchen' %}">Modular Kitchen</a></li>
+                <li class="sub-menu-item"><a href="{% url 'children-room' %}">Children Room</a></li>
+                <li class="sub-menu-item"><a href="{% url 'false-ceiling' %}">False Ceiling</a></li>
+                <li class="sub-menu-item"><a href="{% url 'crockery-units' %}">Crockery Units</a></li>
+                <li class="sub-menu-item"><a href="{% url 'living-room' %}">Living Room</a></li>
+                <li class="sub-menu-item"><a href="{% url 'cookery-shoe-rack' %}">Cookery &amp; Shoe Rack</a></li>
+              </ul>
+            </li>
+            <li class="menu-item nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/" id="projuctsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Our Projects</a>
+              <ul class="dropdown-menu" aria-labelledby="projuctsDropdown">
+                <li><a href="{% url 'contact-us' %}">Project 1</a></li>
+                <li><a href="{% url 'contact-us' %}">Project 2</a></li>
+                <li><a href="{% url 'contact-us' %}">Project 3</a></li>
+                <li><a href="{% url 'contact-us' %}">Project 4</a></li>
+              </ul>
+            </li>
+            <li class="menu-item nav-item"><a href="{% url 'contact-us' %}" class="nav-link">Contact Us</a>
+            </li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav>
+      </div>
+      <!-- navigation  end -->
+    </div>
+    <!-- header-inner  end -->
+    <!-- share button  -->
+    <a class="d-block show-share isShare btn btn-outline-light rounded-0 px-4 py-2"
+      href="{% url 'form_1' %}"><span>Request A Quote</span><i class="fa fa-chain-broken"></i> </a>
+    <!-- mobile nav button -->
+    <div class="st-holder ">
+      <div class="nav-button "><span></span><span></span><span></span></div>
+    </div>
+    <!-- mobile nav button end -->
+    <!-- share  end-->
+  </header>
+  {% block content %}
+
+  {% endblock %}
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact py-0">
+    <div class="container">
+      <div class="bg2">
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img src="{% static 'assets/images/location.png' %}" class="img-fluid mb-3 ">
+            <h3 class="">Our Office</h3>
+            <p class="">Suit No - 302, 3rd Floor, Subishi Plaza,<br> Kondapur, Hyderbad - 500084</p>
+          </div>
+          <div class="col-md-4 text-center brd-lr">
+            <img src="{% static 'assets/images/mailing.png' %}" class="img-fluid mb-3 ">
+            <h3 class="">Our Email</h3>
+            <p class="">Cozyspace21@gmail.com</p>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="{% static 'assets/images/smartphone.png' %}" class="img-fluid mb-3 ">
+            <h3 class="">Our Phone Lines</h3>
+            <p class="">+91 90000 81346</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="map_sec">
+      <iframe style="border:0; width: 100%; min-height: 450px ;height: 100%; margin-bottom: -10px;"
+        src="https://maps.google.com/maps?width=100%25&height=400&hl=en&q=Suit No - 302, 3rd Floor, Subishi Plaza,<br> Kondapur, Hyderbad - 500084&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+        frameborder="0" allowfullscreen=""></iframe>
+    </div>
+  </section><!-- End Contact Section -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h3 class="text-light">Cozy Space</h3>
+            <p class="text-light">
+              Suit No - 302, 3rd Floor, Subishi Plaza,<br> Kondapur, Hyderbad - 500084 <br>
+              <br>
+              <strong>Phone:</strong> Cozyspace21@gmail.com <br>
+              <strong>Email:</strong> +91 90000 81346
+            </p>
+          </div>
+
+          <div class="col-lg-5 col-md-6 footer-links">
+            <h4 class="text-light">Services</h4>
+            <ul>
+              <li class="text-light"><a href="{% url 'wardrobes-storage-units' %}">Wardrobes &amp; Storage Units</a>
+              </li>
+              <li class="text-light"><a href="{% url 'entertainment-unit' %}">Entertainment Unit</a></li>
+              <li class="text-light"><a href="{% url 'study-units' %}">Study Units</a></li>
+              <li class="text-light"><a href="{% url 'puja-units' %}">Puja Units</a></li>
+              <li class="text-light"><a href="{% url 'bedroom' %}">Bedroom</a></li>
+              <li class="text-light"><a href="{% url 'movable-furnitures' %}">Movable Furnitures</a></li>
+              <li class="text-light"><a href="{% url 'modular-kitchen' %}">Modular Kitchen</a></li>
+              <li class="text-light"><a href="{% url 'children-room' %}">Children Room</a></li>
+              <li class="text-light"><a href="{% url 'false-ceiling' %}">False Ceiling</a></li>
+              <li class="text-light"><a href="{% url 'crockery-units' %}">Crockery Units</a></li>
+              <li class="text-light"><a href="{% url 'living-room' %}">Living Room</a></li>
+              <li class="text-light"><a href="{% url 'cookery-shoe-rack' %}">Cookery &amp; Shoe Rack</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4 class="text-light">Our Projects</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 1</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 2</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 3</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 4</a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-flex py-4 border-top justify-content-between">
+
+      <p class="text-light">
+        © Copyright <strong><span>CozySpace</span></strong>. All Rights Reserved.
+      </p>
+      <p class="text-light">
+        Designed by <a href="https://bootstrapmade.com/"></a>
+      </p>
+    </div>
+  </footer><!-- End Footer -->
+
+  <footer class="fixed-footer monolit-footer">
+    <div class="footer-social">
+      <ul>
+        <li><a href="https://www.facebook.com/cozySpace21/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="/" target="_blank"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/cozy-space-8b1a11218" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="/" target="_blank"><i class="fab fa-youtube"></i></a></li>
+      </ul>
+    </div>
+    <!-- Header  title -->
+    <div class="footer-title">
+      <!-- <h2><a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalCenter">Request A
+          Quote</a></h2> -->
+    </div>
+    <!-- Header  title  end-->
+  </footer>
+  <div id="preloader"></div>
+  <a href="/" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <script src="{% static 'assets/js/jquery-2.2.4.min.js' %}" id="cozy_space-jquery-js-js"></script>
+  <script src="{% static 'assets/js/bootstrap.bundle.min.js' %}" id="cozy_space-bootstrap-bundle-js-js"></script>
+  <script src="{% static 'assets/js/owl.carousel.min.js' %}" id="cozy_space-owl-carousel-js-js"></script>
+  <script src="{% static 'assets/js/glightbox.min.js' %}" id="cozy_space-glightbox-js-js"></script>
+  <script src="{% static 'assets/js/skrollr.js' %}" id="cozy_space-skrollr-js-js"></script>
+  <script src="{% static 'assets/js/main-new.js' %}" id="cozy_space-main-js-js"></script>
+
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <a type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <img src="{% static 'assets/images/close.png' %}" width="50">
+        </a>
+        <div class="banner_form p-3  ">
+          <div role="form" class="wpcf7" id="wpcf7-f68-o2" lang="en-US" dir="ltr">
+            <div class="screen-reader-response">
+              <p role="status" aria-live="polite" aria-atomic="true"></p>
+              <ul></ul>
+            </div>
+            <form method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">{csrf_token}
+              <div style="display: none;">
+                <input type="hidden" name="_wpcf7" value="68">
+                <input type="hidden" name="_wpcf7_version" value="5.5.2">
+                <input type="hidden" name="_wpcf7_locale" value="en_US">
+                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f68-o2">
+                <input type="hidden" name="_wpcf7_container_post" value="0">
+                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+              </div>
+              <h2 class="mb-5 w-100 text-white ">Meet a Designer Online</h2>
+              <div class="row">
+                <div class=" form-group col-6 mb-5 "><span class="wpcf7-form-control-wrap YourName"><input type="text"
+                      name="YourName" value="" size="40"
+                      class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control text-white p-3 rounded-0 border-0 bg-transparent border-bottom"
+                      aria-required="true" aria-invalid="false" placeholder="Your Name"></span></div>
+                <div class=" form-group col-6 mb-5"><span class="wpcf7-form-control-wrap YourEmail"><input type="email"
+                      name="YourEmail" value="" size="40"
+                      class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control text-white p-3 rounded-0 border-0 bg-transparent border-bottom"
+                      aria-required="true" aria-invalid="false" placeholder="Your Email"></span> </div>
+              </div>
+              <div class="row">
+                <div class=" form-group col mb-5"><span class="wpcf7-form-control-wrap YourPhoneNumber"><input
+                      type="tel" name="YourPhoneNumber" value="" size="40"
+                      class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel form-control text-white p-3 rounded-0 border-0 bg-transparent border-bottom"
+                      aria-required="true" aria-invalid="false" placeholder="Your Phone Number"></span></div>
+                <div class=" form-group col mb-5"><span class="wpcf7-form-control-wrap YourPincode"><input type="text"
+                      name="YourPincode" value="" size="40"
+                      class="wpcf7-form-control wpcf7-text form-control text-white p-3 rounded-0 border-0 bg-transparent border-bottom"
+                      aria-invalid="false" placeholder="Your Pincode"></span></div>
+              </div>
+              <div class=" mb-3"><input type="submit" value="SEND"
+                  class="wpcf7-form-control has-spinner wpcf7-submit btn ms-0 btn-theme px-5 py-3 font-weight-bold"><span
+                  class="wpcf7-spinner"></span></div>
+              <p class="form_privecy text-white ">By submiting this form, you agree the <a
+                  href="/">Privecy policy</a> and <a href="/">Terms</a>. </p>
+              <div class="wpcf7-response-output" aria-hidden="true"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="position-fixed whatsapp_link"><a href="https://wa.me/917799016633" target="_blank" class=""> <i
+        class="fa fa-whatsapp"></i> </a></div>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      function skrollrjs() {
+        if ($(window).width() > 767) {
+          var s = skrollr.init();
+        }
+      }
+      skrollrjs();
+      $(window).resize(function () {
+        skrollrjs();
+      });
+    })
+
+  </script>
+  <script type="text/javascript">
+    var slsl = jQuery(".slideshow-item");
+    slsl.owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 5000,
+      items: 1,
+      dots: false,
+      animateOut: "animate__slideOutLeft",
+      animateIn: "animate__slideInRight",
+
+    });
+    var kitchen_gallery = jQuery(".kitchen_gallery");
+    $('.kitchen_gallery').owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 30,
+      responsive: {
+        320: {
+          margin: 0
+        }
+      }
+    });
+    $('.testimonials-slider').owlCarousel({
+      items: 1,
+      loop: true,
+      margin: 0,
+      dots: true
+    });
+    $('.kitchen_next').click(function () {
+      $(this).siblings('.gallery_slider').trigger('next.owl.carousel');
+    });
+    $('.kitchen_prev').click(function () {
+      $(this).siblings('.gallery_slider').trigger('prev.owl.carousel');
+    });
+
+    function a() {
+      jQuery(".slideshow-item .item").css({
+        height: jQuery(".slideshow-item ").outerHeight(true)
+      });
+      jQuery(".hero-wrap").css({
+        height: jQuery(window).height(true)
+      });
+    }
+
+    a();
+
+    jQuery(window).resize(function () {
+      a();
+    });
+
+  </script>
+</body>
+
+</html>

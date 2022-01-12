@@ -82,9 +82,14 @@ DATABASES = {
 }
 
 
-TwoFactorAPI_KEY = 'c46a746b-3fcb-11ec-a13b-0200cd936042'
+TWOFACTOR_API_KEY = 'c46a746b-3fcb-11ec-a13b-0200cd936042'
 
-
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'askcozyspace@gmail.com'
+EMAIL_HOST_PASSWORD = 'wdctiwipkkcdsocm'
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
