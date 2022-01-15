@@ -24,4 +24,4 @@ node_modules/
 *.sql
 db.sqlite3
 **/__pycache__
-main/static
+# main/static
