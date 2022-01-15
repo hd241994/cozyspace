@@ -86,7 +86,6 @@ def pincode_validation(pin):
 
 
 def form_3(request):
-	import ipdb; ipdb.set_trace()
 	try:
 		if request.method == 'POST':
 			pin = request.POST.get('pincode')
@@ -206,13 +205,7 @@ def send_cust_details(request):
 					'Content-Type': 'multipart/form-data'
 				}
 		# response = requests.request("POST", url, data=payload, headers=headers)
-		subject = 'REQUEST A  QUOTE' 
-		message = "Customer Details \n" + str(request.session['Name']) + ', \n' + str(request.session['cutomer_phone']) + ', \n' + \
-					str(request.session['PIN']) + ', \n' + str(request.session['floortype']) + ', \n'+ str(request.session['bhktype'])+ \
-					', \n' + request.session.get('budget', 'Budget')
-		email_from = settings.EMAIL_HOST_USER
-		recipient_list = ['deviprasaddigital@gmail.com', 'esu.b.tech@gmail.com']
-		send_mail( subject, message, email_from, recipient_list ) 
+		
 
 		# requests.request()
 	except Exception as e:
@@ -239,7 +232,7 @@ def otp_validation(request):
 					cust.save()
 					# send_cust_details(request)
 					request.session.flush()
-					return HttpResponse("Thanks for registering here.")
+					return redirect('registred_response')
 				else:
 					return HttpResponse("OTP Mismatched!!!!")
 		

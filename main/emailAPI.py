@@ -10,7 +10,7 @@ class EmailSending:
         self.__ownermail = "askcozyspace@gmail.com"
         self.__password = "wdctiwipkkcdsocm"
         # self.to = 'jaikumar00.jk@gmail.com'
-        self.to = ['esu.b.tech@gmail.com', 'deviprasaddigital@gmail.com' ]
+        self.to = ['cozyspace21@gmail.com']
         self.sub = ''
         self.body = ''
         self.msg = EmailMessage()

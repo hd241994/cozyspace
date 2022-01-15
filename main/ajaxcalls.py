@@ -18,21 +18,30 @@ def expert_call(request):
         name = request.POST.get('name')
         phone = request.POST.get('phone')
 
-        url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/ADDON_SERVICES/SEND/TSMS'
+        # url = f'https://2factor.in/API/V1/{settings.TWOFACTOR_API_KEY}/ADDON_SERVICES/SEND/TSMS'
                  
-        payload = {
-            "From": "cozysp",
-            "To": "7008975760,", 
-            "TemplateName": "Admin MSG", 
-            "VAR1":name, 
-            "VAR2": phone,
-            # "VAR3":name, 
-            # "VAR4": phone,
-            # "VAR5":name, 
-            # "VAR6": phone
-            }
+        # payload = {
+        #     "From": "cozysp",
+        #     "To": "7008975760,", 
+        #     "TemplateName": "Admin MSG", 
+        #     "VAR1":name, 
+        #     "VAR2": phone,
+        #     # "VAR3":name, 
+        #     # "VAR4": phone,
+        #     # "VAR5":name, 
+        #     # "VAR6": phone
+        #     }
+        emailobj = EmailSending()
+        emailobj.sub = "EXPERT CALL BACK"
+        # emailobj.to = 'avsr94@gmail.com'
+        emailobj.body = f'''
+        Name of Customer: {name},
+        Customer phone: {phone},
      
-        response = requests.request("POST", url, data=payload)      
+
+        '''
+        emailobj.sendMail()
+        # response = requests.request("POST", url, data=payload)      
 
         # payload = {'From': 'cozysp', 'To': '7008975760',
         #            'TemplateName': 'Admin MSG', 'MSG': "Hi Jai, Customer Details Eswar, 9090909090"}
@@ -44,8 +53,10 @@ def expert_call(request):
         
     except Exception as e:
         print(e)
-    print(response.json())    
-    return JsonResponse(response.json())
+    # print(response.json())    
+    # return JsonResponse(response.json())
+    return JsonResponse({"message": "triggered"})
+
 
 @api_view(["POST"])
 @csrf_exempt
