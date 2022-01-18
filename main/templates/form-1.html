@@ -27,7 +27,18 @@
   <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
 
 </head>
+<style>
+@media only screen and (max-width: 767px){
+  .btn-group > div {
+      margin-bottom: 20px;
+      padding: 0 15px !important;
+  }
+  .d-flex {
+    flex-wrap: wrap;
+  }
+}
 
+</style>
 <body>
   <!-- ======= Header ======= -->
   <header id="header" class="">
