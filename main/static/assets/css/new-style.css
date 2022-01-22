@@ -328,13 +328,13 @@ footer.fixed-footer .footer-social:before {
 }
 .footer-social ul {
     padding-left: 0px;
-	list-style: none;
+  list-style: none;
 }
 #footer .footer-top .footer-links.col-lg-5 ul {
     max-width: 450px;
     display: flex;
     flex-wrap: wrap;
-	align-items:center
+  align-items:center
 }
 .position-fixed.whatsapp_link {
     z-index: 7;
@@ -552,8 +552,8 @@ h2.section-title img {
     z-index: 9;
 }
 .kitchen_prev i, .kitchen_next i {
-	    font-size: 46px;
-	color: #262626
+      font-size: 46px;
+  color: #262626
 }
 .service_icon > img {
     max-width: 120px;
@@ -883,7 +883,7 @@ background: #000000;
 }
 .img_gallery img.img-fluid {
     object-fit: cover;
-	width: 100%;
+  width: 100%;
     height: 100%;
 }
 .img_gallery {
@@ -1125,9 +1125,24 @@ position: fixed;
 .call-to-action .box-shadow {
     padding: 20px !important;
 }
-	#footer .footer-top .footer-links.col-lg-5 ul li {
+  #footer .footer-top .footer-links.col-lg-5 ul li {
     width: 100%;
     padding-right: 0;
+}
+.skroll-title {
+    position: unset !important;
+}
+.skroll-title h2 {
+    font-weight: 700 !important;
+}
+.position-fixed.whatsapp_link a {
+    width: 40px;
+    height: 42px;
+    font-size: 26px;
+    padding-top: 3px;
+}
+.back-to-top {
+    display: none !important;
 }
 }
 @media (max-width: 767px) {
@@ -1376,11 +1391,11 @@ position: fixed;
   }
   .kitchen_prev {
       left: 5px !important;
-      top: 110% !important;
+      top: 100% !important;
   }
   .kitchen_next {
       right: 5px !important;
-      top: 110% !important;
+      top: 100% !important;
   }
   .slider_section .px-5 {
       padding-left: 0px !important;
