@@ -1129,9 +1129,7 @@ position: fixed;
     width: 100%;
     padding-right: 0;
 }
-.skroll-title {
-    position: unset !important;
-}
+
 .skroll-title h2 {
     font-weight: 700 !important;
 }
@@ -1235,7 +1233,7 @@ position: fixed;
       padding-right: 0px !important;
   }
   .skroll-title {
-      position: unset;
+      position: unset !important;
   }
   .skroll-title h2 {
       margin-left: unset;
