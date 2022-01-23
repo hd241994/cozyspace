@@ -31,6 +31,13 @@
   body {
     background: #f8f8f8;
   }
+  .btn-check:active+.btn-outline-danger, 
+  .btn-check:checked+.btn-outline-danger,
+ .btn-outline-danger:active {
+    color: #dc3545;
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
   @media only screen and (max-width: 767px) { 
   .row .col {
     flex: unset;
