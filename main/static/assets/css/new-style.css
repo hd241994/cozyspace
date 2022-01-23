@@ -1234,11 +1234,12 @@ position: fixed;
   }
   .skroll-title {
       position: unset !important;
+      transform: unset !important;
   }
   .skroll-title h2 {
       margin-left: unset;
-      font-weight: 500 !important;
-      font-size: calc(1.325rem + .9vw);
+      font-weight: 700 !important;
+      font-size: calc(1.8 + .9vw);
       opacity: 1;
       line-height: 1;
       transform: unset;
