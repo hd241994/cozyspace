@@ -116,6 +116,7 @@ li {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
+  display: none
 }
 .back-to-top i {
   font-size: 28px;
