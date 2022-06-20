@@ -262,6 +262,26 @@ right: 21.9em;
     background-position: center;
     background-repeat: repeat;
     background-origin: content-box;
+      display: flex;
+    align-items: center;
+}
+.hero_text h2 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    padding-bottom: 10px;
+    position: relative;
+    z-index: 12;
+}
+.hero_text a {
+    display: inline-block;
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 16px;
+    background: #000;
+    border: 2px solid #000;
+    text-transform: uppercase;
 }
 .hero-wrap {
     width: 100%;
@@ -270,12 +290,14 @@ right: 21.9em;
     overflow: hidden;
     z-index: 2;
     text-align: center;
+  di
 }
 .hero-wrap-item {
     width: 100%;
     position: absolute;
     z-index: 12;
       top: 49%;
+  display: none;
 }
 .hero-wrap-item h2 {
 color: #fff;
