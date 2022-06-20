@@ -64,12 +64,12 @@
             <li class="menu-item nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="/" id="projuctsDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Our Projects</a>
-              <ul class="dropdown-menu" aria-labelledby="projuctsDropdown">
+             <!--  <ul class="dropdown-menu" aria-labelledby="projuctsDropdown">
                 <li><a href="{% url 'contact-us' %}">Project 1</a></li>
                 <li><a href="{% url 'contact-us' %}">Project 2</a></li>
                 <li><a href="{% url 'contact-us' %}">Project 3</a></li>
                 <li><a href="{% url 'contact-us' %}">Project 4</a></li>
-              </ul>
+              </ul> -->
             </li>
             <li class="menu-item nav-item"><a href="{% url 'contact-us' %}" class="nav-link">Contact Us</a>
             </li>
@@ -81,8 +81,8 @@
     </div>
     <!-- header-inner  end -->
     <!-- share button  -->
-    <a class="d-block show-share isShare btn btn-outline-light rounded-0 px-4 py-2"
-      href="{% url 'form_1' %}"><span>Request A Quote</span><i class="fa fa-chain-broken"></i> </a>
+    <!-- <a class="d-block show-share isShare btn btn-outline-light rounded-0 px-4 py-2"
+      href="{% url 'form_1' %}"><span>Request A Quote</span><i class="fa fa-chain-broken"></i> </a> -->
     <!-- mobile nav button -->
     <div class="st-holder ">
       <div class="nav-button "><span></span><span></span><span></span></div>
@@ -130,12 +130,9 @@
         <div class="row">
 
           <div class="col-lg-4 col-md-6 footer-contact">
-            <h3 class="text-light">Cozy Space</h3>
-            <p class="text-light">3rd Floor Highmark Chambers <br>Khajaguda 500032
-              <br>
-              <strong>Phone:</strong> Cozyspace21@gmail.com <br>
-              <strong>Email:</strong> +91 77990 16633
-            </p>
+            <a href="/">
+                      <img src="/static/assets/img/logo.png">
+                    </a>
           </div>
 
           <div class="col-lg-5 col-md-6 footer-links">
@@ -158,16 +155,15 @@
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
-            <h4 class="text-light">Our Projects</h4>
+            <h4 class="text-light">Quick Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 1</a>
+            	<li><i class="bx bx-chevron-right"></i> <a href="/" class="text-light">Home</a>
               </li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 2</a>
+              <li><i class="bx bx-chevron-right"></i> <a href="/contact-us/" class="text-light">Contact Us</a>
               </li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 3</a>
+              <li><i class="bx bx-chevron-right"></i> <a href="/" class="text-light">Terms & Conditions</a>
               </li>
-              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contact-us' %}" class="text-light">Project 4</a>
-              </li>
+              
             </ul>
           </div>
 
