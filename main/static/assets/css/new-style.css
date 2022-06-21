@@ -353,8 +353,8 @@ footer.fixed-footer .footer-social:before {
     padding-left: 0px;
   list-style: none;
 }
-#footer .footer-top .footer-links.col-lg-5 ul {
-    max-width: 450px;
+#footer .footer-top .footer-links.col-lg-7 ul {
+    max-width: 750px;
     display: flex;
     flex-wrap: wrap;
   align-items:center
@@ -363,7 +363,7 @@ footer.fixed-footer .footer-social:before {
     z-index: 7;
 }
 
-#footer .footer-top .footer-links.col-lg-5 ul li {
+#footer .footer-top .footer-links.col-lg-7 ul li {
     width: 50%;
     padding-right: 15px;
 }
@@ -1148,7 +1148,7 @@ position: fixed;
 .call-to-action .box-shadow {
     padding: 20px !important;
 }
-  #footer .footer-top .footer-links.col-lg-5 ul li {
+  #footer .footer-top .footer-links.col-lg-7 ul li {
     width: 100%;
     padding-right: 0;
 }
