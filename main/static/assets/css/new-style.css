@@ -116,7 +116,10 @@ li {
   height: 40px;
   border-radius: 4px;
   transition: all 0.4s;
-  display: none
+  display: none !important
+}
+.back-to-top {
+    display: none !important;
 }
 .back-to-top i {
   font-size: 28px;
@@ -1162,9 +1165,7 @@ position: fixed;
     font-size: 26px;
     padding-top: 3px;
 }
-.back-to-top {
-    display: none !important;
-}
+
 }
 @media (max-width: 767px) {
   .testimonials .testimonial-wrap {
