@@ -133,6 +133,7 @@ li {
 .back-to-top.active {
   visibility: visible;
   opacity: 1;
+    display: none !important;
 }
 /*--------------------------------------------------------------
 # Header
