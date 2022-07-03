@@ -903,7 +903,7 @@ background: #000000;
     position: absolute;
 }
 .innerpage_banner_sec {
-    height: 480px;
+    height: 100vh;
     overflow: hidden;
         text-align: center;
         position: relative;
