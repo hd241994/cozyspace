@@ -34,7 +34,7 @@ urlpatterns += (
     path('living-room/', TemplateView.as_view(template_name='main/living-room.html'), name='living-room'),
     path('cookery-shoe-rack/', TemplateView.as_view(template_name='main/cookery-&-shoe-rack.html'), name='cookery-shoe-rack'),
     path('contact-us/', TemplateView.as_view(template_name='main/contact-us.html'), name='contact-us'),
-
+    path('our-projects/', TemplateView.as_view(template_name='main/our-projects.html'), name='our-projects'),
 )
 
 urlpatterns += (
