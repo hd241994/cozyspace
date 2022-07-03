@@ -1,0 +1,47 @@
+{% extends 'base-header.html' %}
+{% load static %}
+
+   {% block content %}
+
+      <div class="innerpage_banner_sec">
+         <div class="innerpage_banner ">
+            <img src="{% static 'assets/images/living-room-9.jpg' %}" alt="">
+         </div>
+         <style>
+            .innerpage_banner {
+            background: #000;
+            height: 100%;
+            }
+            .innerpage_banner_sec .innerpage_banner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            }
+         </style>
+         <div class="hero-wrap-item center-item">
+            <!--     <h2><span style="color: #ffffff;">Living Room</span></h2> -->
+         </div>
+      </div>
+      <section class="about_sec section">
+         <div class="container">
+            <div class="row ">
+               <div class="col-sm-6 mb-5">
+                 <video width="600" controls style="max-width: 100%; background: #efefef; padding: 10px;">
+                   <source src="{% static 'assets/images/cozyspace-project-1.mp4' %}" type="video/mp4">
+                 </video>
+               </div>
+               <div class="col-sm-6  mb-5">
+                 <video width="600" controls style="max-width: 100%; background: #efefef; padding: 10px;">
+                   <source src="{% static 'assets/images/cozyspace-project-2.mp4' %}" type="video/mp4">
+                 </video>
+               </div>
+               <div class="col-sm-6  mb-5">
+                 <video width="600" controls style="max-width: 100%; background: #efefef; padding: 10px;">
+                   <source src="{% static 'assets/images/cozyspace-project-3.mp4' %}" type="video/mp4">
+                 </video>
+               </div>
+            </div>
+         </div>
+      </section>
+     {% endblock %}
