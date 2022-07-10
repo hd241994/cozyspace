@@ -45,7 +45,7 @@
                      <ul></ul>
                   </div>
                   <form  class="wpcf7-form init" novalidate="novalidate"
-                     data-status="init">{% csrf_token %}
+                     data-status="init">
                      <div style="display: none;">
                         <input type="hidden" name="_wpcf7" value="67">
                         <input type="hidden" name="_wpcf7_version" value="5.5.2">
@@ -98,7 +98,9 @@
          e.preventDefault();
          $('.send').css('display', 'none')
          $('.sending').removeAttr('style');
-
+         $('.valid-name').html('')
+         $('.valid-email').html('')
+         $('.valid-msg').html('')
          $('.wpcf7-response-output').html('')
          let name = $('#name').val()
          let email = $('#email').val()
@@ -126,6 +128,7 @@
          if (error) {
             $('.wpcf7-response-output').css({ "color": "red" }).addClass("response_output").html('One or more fields have an error. Please check and try again.')
             $('.send').removeAttr('style');
+            $('.sending').css('display', 'none')
          }
          else {
             data = {
