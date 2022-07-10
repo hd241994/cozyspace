@@ -44,7 +44,7 @@
                      <p role="status" aria-live="polite" aria-atomic="true"></p>
                      <ul></ul>
                   </div>
-                  <form  method="post" class="wpcf7-form init" novalidate="novalidate"
+                  <form  class="wpcf7-form init" novalidate="novalidate"
                      data-status="init">{% csrf_token %}
                      <div style="display: none;">
                         <input type="hidden" name="_wpcf7" value="67">
@@ -77,11 +77,13 @@
                               cols="40" rows="5" id="message" class="wpcf7-form-control wpcf7-textarea form-control"
                               aria-invalid="false" placeholder="Message"></textarea></span>
                               <span class="valid-msg"></div>
-                     <div class="text-center"><input type="submit" value="Send Message"
+                     <div class="text-center send"><input type="submit" value="Send Message"
                            class="wpcf7-form-control has-spinner wpcf7-submit btn btn-theme"><span
                            class="wpcf7-spinner"></span></div>
-                     <div class="wpcf7-response-output" aria-hidden="true"></div>
-                  </form>
+                           <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        </form>
+                        <div class="text-center sending" style="display:none" ><button  
+                           class="btn btn-theme">Message Sending..</div>
                </div>
             </div>
          </div>
@@ -94,6 +96,9 @@
    $(document).ready(function () {
       $('form').on('submit', function (e) {
          e.preventDefault();
+         $('.send').css('display', 'none')
+         $('.sending').removeAttr('style');
+
          $('.wpcf7-response-output').html('')
          let name = $('#name').val()
          let email = $('#email').val()
@@ -120,7 +125,7 @@
          }
          if (error) {
             $('.wpcf7-response-output').css({ "color": "red" }).addClass("response_output").html('One or more fields have an error. Please check and try again.')
-
+            $('.send').removeAttr('style');
          }
          else {
             data = {
@@ -143,6 +148,9 @@
                      $('.wpcf7-response-output').css({ "color": "green" }).addClass(
                         "response_output").html('Thanks for submission.')
                   }
+               $('.sending').css('display', 'none')
+               $('.send').removeAttr('style');
+         
                }
             });
          }
