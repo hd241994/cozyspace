@@ -46,14 +46,14 @@
                   </div>
                   <form  class="wpcf7-form init" novalidate="novalidate"
                      data-status="init">
-                     <div style="display: none;">
+                     {% comment %} <div style="display: none;">
                         <input type="hidden" name="_wpcf7" value="67">
                         <input type="hidden" name="_wpcf7_version" value="5.5.2">
                         <input type="hidden" name="_wpcf7_locale" value="en_US">
                         <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f67-o1">
                         <input type="hidden" name="_wpcf7_container_post" value="0">
                         <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                     </div>
+                     </div> {% endcomment %}
                      <h2 class="text-center mb-3">Contact Us</h2>
                      <div class="row">
                         <div class="col-md-6 form-group"> <span class="wpcf7-form-control-wrap YourName"><input
@@ -90,7 +90,10 @@
       </div>
    </div>
 </section>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+{% comment %} <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script> {% endcomment %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
 <script>
    $(document).ready(function () {
